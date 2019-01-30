@@ -12,4 +12,4 @@ app.use(bodyParser.json());
 app.listen(8080, () => console.log(`Listening at http://localhost:8080`));
 app.use(express.static(path.join(__dirname, '../../dist/')));
 
-app.post('/calculate', Controller.calculate)
+app.post('/api/calculate', Controller.calculate)
