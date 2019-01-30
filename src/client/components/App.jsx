@@ -7,7 +7,8 @@ export default function App() {
   const [numberOfDays, setNumberOfDays] = useState(0);
   const [totalCost, setTotalCost] = useState('');
 
-  useEffect(() => { console.log(startDate, numberOfDays, totalCost) });
+  // useEffect(() => { console.log(startDate, numberOfDays, totalCost) });
+
   return (
     <div>
       <h1>Bob's Banana Budget</h1>
@@ -30,10 +31,10 @@ export default function App() {
 
       }}>
         <div>
-          <span>Beginning Date</span><input type='date' min='2019-01-01' value={startDate} onChange={e => setStartDate(e.target.value)} />
+          <span><strong>Beginning Date</strong></span><input type='date' min='2019-01-01' value={startDate} onChange={e => setStartDate(e.target.value)} />
         </div>
         <div>
-          <span>Number of Days</span><input type='text' placeholder='number of days*' value={numberOfDays} onChange={e => setNumberOfDays(e.target.value)} />
+          <span><strong>Number of Days</strong></span><input type='text' placeholder='number of days*' value={numberOfDays} onChange={e => setNumberOfDays(e.target.value)} />
         </div>
         <button id='submit-button' value="Submit">submit</button>
       </form>
